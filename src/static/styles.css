@@ -12,16 +12,17 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background: linear-gradient(to bottom, #e3f2fd, #f5f5f5);
 }
 
 header {
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
-  background-color: #1a237e;
+  background: linear-gradient(to right, #3949ab, #1a237e);
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -29,8 +30,8 @@ header h1 {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
   justify-content: center;
 }
@@ -44,8 +45,8 @@ main {
 section {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
 }
@@ -59,19 +60,22 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
-  color: #0066cc;
-}
-
-.activity-card p {
-  margin-bottom: 8px;
+  color: #3949ab;
 }
 
 .activity-card p {
@@ -82,6 +86,17 @@ section h3 {
   display: block;
   margin-top: 10px;
   color: #333;
+}
+
+.activity-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+}
+
+.activity-card ul li {
+  margin-bottom: 5px;
 }
 
 .form-group {
@@ -104,18 +119,19 @@ section h3 {
 }
 
 button {
-  background-color: #1a237e;
+  background: linear-gradient(to right, #3949ab, #1a237e);
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #3949ab;
+  background: linear-gradient(to right, #5c6bc0, #3949ab);
+  transform: scale(1.05);
 }
 
 .message {
@@ -151,4 +167,7 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
